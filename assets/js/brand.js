@@ -201,17 +201,20 @@ document.querySelectorAll('[data-phone-mask]').forEach(maskPhone);
 /* Carrossel de depoimentos em vídeo + modal YouTube */
 (function initVideoCarousel() {
   const track = document.getElementById('video-carousel-track');
-  const dots = document.querySelectorAll('.video-dot');
-  if (!track) return;
+  const viewport = track?.parentElement;
+  const dots = document.querySelectorAll('.video-dots .video-dot');
+  if (!track || !viewport) return;
 
   let idx = 0;
   let timer;
+
+  const slideWidth = () => viewport.clientWidth;
 
   const go = (n) => {
     const total = track.children.length;
     if (!total) return;
     idx = (n + total) % total;
-    track.style.transform = `translateX(-${idx * 100}%)`;
+    track.style.transform = `translateX(-${idx * slideWidth()}px)`;
     dots.forEach((d, i) => d.classList.toggle('active', i === idx));
   };
 
@@ -224,9 +227,10 @@ document.querySelectorAll('[data-phone-mask]').forEach(maskPhone);
   document.getElementById('video-prev')?.addEventListener('click', () => { stop(); go(idx - 1); reset(); });
   document.getElementById('video-next')?.addEventListener('click', () => { stop(); go(idx + 1); reset(); });
 
-  const wrap = track.closest('.video-carousel-wrap');
+  const wrap = track.closest('.video-carousel-wrap')?.parentElement;
   wrap?.addEventListener('mouseenter', stop);
   wrap?.addEventListener('mouseleave', start);
+  window.addEventListener('resize', () => go(idx));
   go(0);
   start();
 

@@ -44,35 +44,32 @@
   <!-- ========== HEADER ========== -->
   <header id="header" class="fixed inset-x-0 top-0 z-50 py-4">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <nav class="flex items-center justify-between" aria-label="Navegação principal">
+      <nav class="flex items-center justify-between gap-4" aria-label="Navegação principal">
 
-        <!-- Logo -->
-        <a href="/" class="flex items-center h-10">
-          <img src="../assets/images/logo.webp" alt="Conceito Prime - Marketing Digital" width="400" height="114" class="h-full object-contain">
+        <a href="/" class="site-logo-link">
+          <img src="../assets/images/logo.webp" alt="Conceito Prime - Marketing Digital" width="1250" height="356" class="site-logo">
         </a>
 
-        <!-- Desktop links -->
-        <div class="hidden md:flex items-center gap-10">
-          <a href="/"       class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Início</a>
-          <a href="/quem-somos/"  class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Quem somos</a>
-          <a href="/blog/"        class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Blog</a>
-          <a href="/contato/"     class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Contato</a>
-        </div>
-
-        <!-- CTA + burger -->
-        <div class="flex items-center gap-4">
+        <div class="header-nav-right hidden md:flex">
+          <div class="header-nav-links">
+            <a href="/"       class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Início</a>
+            <a href="/quem-somos/"  class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Quem somos</a>
+            <a href="/blog/"        class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Blog</a>
+            <a href="/contato/"     class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Contato</a>
+          </div>
           <a href="#"
-             class="btn-wa hidden md:inline-flex text-[11px] px-7 py-3 uppercase tracking-[0.2em]">
+             class="btn-wa text-[11px] px-6 py-3 uppercase tracking-[0.15em]">
             Solicitar orçamento
           </a>
-          <button id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" class="md:hidden text-prime-900 focus:outline-none">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
         </div>
+
+        <button id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" class="md:hidden text-prime-900 focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
       </nav>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 pt-4 flex flex-col gap-4 bg-white/95">
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 pt-4 flex flex-col gap-4 bg-white">
         <a href="/"       class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Início</a>
         <a href="/quem-somos/"  class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Quem somos</a>
         <a href="/blog/"        class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Blog</a>
@@ -260,7 +257,7 @@
         
         <!-- Logo & About -->
         <div class="lg:col-span-5">
-          <img src="../assets/images/logo.webp" alt="Conceito Prime - Marketing Digital" width="400" height="114" class="h-8 object-contain mb-8 filter brightness-0 invert opacity-90">
+          <img src="../assets/images/logo-footer.webp" alt="Conceito Prime - Marketing Digital" width="400" height="114" class="footer-logo mb-8">
           <p class="text-prime-400 font-light text-[13px] leading-[1.8] max-w-sm">
             Especialistas em posicionamento, branding e tráfego para marcas que buscam autoridade, elegância e resultados de altíssimo padrão.
           </p>

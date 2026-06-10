@@ -49,35 +49,32 @@
   <!-- ========== HEADER ========== -->
   <header id="header" class="fixed inset-x-0 top-0 z-50 py-4">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <nav class="flex items-center justify-between" aria-label="Navegação principal">
+      <nav class="flex items-center justify-between gap-4" aria-label="Navegação principal">
 
-        <!-- Logo -->
-        <a href="/" class="flex items-center h-10">
-          <img src="assets/images/logo.webp" alt="Conceito Prime - Marketing Digital" width="400" height="114" class="h-full object-contain">
+        <a href="/" class="site-logo-link">
+          <img src="assets/images/logo.webp" alt="Conceito Prime - Marketing Digital" width="1250" height="356" class="site-logo">
         </a>
 
-        <!-- Desktop links -->
-        <div class="hidden md:flex items-center gap-10">
-          <a href="/"       class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Início</a>
-          <a href="/quem-somos/"  class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Quem somos</a>
-          <a href="/blog/"        class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Blog</a>
-          <a href="/contato/"     class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Contato</a>
-        </div>
-
-        <!-- CTA + burger -->
-        <div class="flex items-center gap-4">
+        <div class="header-nav-right hidden md:flex">
+          <div class="header-nav-links">
+            <a href="/"       class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Início</a>
+            <a href="/quem-somos/"  class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Quem somos</a>
+            <a href="/blog/"        class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Blog</a>
+            <a href="/contato/"     class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Contato</a>
+          </div>
           <a href="#"
-             class="btn-wa hidden md:inline-flex text-[11px] px-7 py-3 uppercase tracking-[0.2em]">
+             class="btn-wa text-[11px] px-6 py-3 uppercase tracking-[0.15em]">
             Solicitar orçamento
           </a>
-          <button id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" class="md:hidden text-prime-900 focus:outline-none">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
         </div>
+
+        <button id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" class="md:hidden text-prime-900 focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
       </nav>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 pt-4 flex flex-col gap-4 bg-white/95">
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 pt-4 flex flex-col gap-4 bg-white">
         <a href="/"       class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Início</a>
         <a href="/quem-somos/"  class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Quem somos</a>
         <a href="/blog/"        class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Blog</a>
@@ -114,31 +111,31 @@
   <!-- ========== NOSSA ESTRUTURA ========== -->
   <section id="estrutura" class="py-32 bg-prime-50">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-16 lg:gap-20 items-center">
         
         <!-- Text -->
-        <div class="order-2 lg:order-1 pr-0 lg:pr-10">
+        <div class="order-2 lg:order-1 pr-0 lg:pr-6">
           <div class="w-12 h-[1px] bg-gold-400 mb-8"></div>
           <h2 class="font-serif text-4xl sm:text-5xl text-prime-900 mb-8 leading-tight uppercase">
             Nossa <span class="text-gold-400">estrutura</span>
           </h2>
-          <p class="text-prime-600 font-light text-[15px] leading-[1.8] mb-6">
+          <p class="text-prime-700 font-normal text-base leading-[1.8] mb-6">
             Com um ambiente minuciosamente planejado e pautado pela excelência, garantimos entregas que superam expectativas e constroem valor real para as marcas dos nossos clientes.
           </p>
-          <p class="text-prime-600 font-light text-[15px] leading-[1.8] mb-10">
+          <p class="text-prime-700 font-normal text-base leading-[1.8] mb-10">
             Nossa sede foi concebida para proporcionar sofisticação e máxima eficiência operacional. Um espaço que inspira o pensamento analítico e a criatividade de ponta, permitindo que mentes brilhantes transformem ideias complexas em resultados excepcionais.
           </p>
           
-          <a href="/quem-somos/" class="inline-flex items-center gap-3 text-prime-900 uppercase tracking-[0.15em] text-[11px] font-semibold hover:text-gold-500 transition-colors">
+          <a href="/quem-somos/" class="inline-flex items-center gap-3 text-prime-900 uppercase tracking-[0.15em] text-xs font-semibold hover:text-gold-500 transition-colors">
             Conheça nossa história <i class="fas fa-arrow-right "></i>
           </a>
         </div>
 
         <!-- Image -->
-        <figure class="order-1 lg:order-2 relative flex justify-center lg:justify-end m-0" id="estrutura-img-container">
-          <div class="relative max-w-lg w-full z-10">
-            <div id="estrutura-shadow" class="absolute -inset-4 bg-gold-400 opacity-0 translate-x-0 translate-y-0 -z-10 transition-all duration-1000 ease-out" aria-hidden="true"></div>
-            <img src="assets/images/estrutura.webp" alt="Equipe da Conceito Prime no escritório em Curitiba" width="900" height="506" class="w-full object-contain relative z-0 grayscale-[20%] border border-white/10" loading="lazy" decoding="async">
+        <figure class="order-1 lg:order-2 relative w-full m-0" id="estrutura-img-container">
+          <div class="relative w-full z-10">
+            <div id="estrutura-shadow" class="estrutura-shadow" aria-hidden="true"></div>
+            <img src="assets/images/estrutura.webp" alt="Equipe da Conceito Prime no escritório em Curitiba" width="900" height="506" class="w-full aspect-[4/3] object-cover relative z-0 grayscale-[20%] border border-white/10" loading="lazy" decoding="async">
           </div>
         </figure>
 
@@ -424,16 +421,16 @@
             </button>
           </div>
         </div>
-        <div class="video-dots" role="tablist" aria-label="Navegar depoimentos em vídeo">
-          <button type="button" class="video-dot active" aria-label="Depoimento 1, Rafael Kuzma"></button>
-          <button type="button" class="video-dot" aria-label="Depoimento 2, Philippe Enke"></button>
-          <button type="button" class="video-dot" aria-label="Depoimento 3, Ruan Ançay"></button>
-          <button type="button" class="video-dot" aria-label="Depoimento 4, Heloise Biscaia"></button>
-        </div>
         </div>
         <button type="button" class="video-arrow video-arrow-next" id="video-next" aria-label="Próximo depoimento">
           <i class="fas fa-chevron-right" aria-hidden="true"></i>
         </button>
+      </div>
+      <div class="video-dots" role="tablist" aria-label="Navegar depoimentos em vídeo">
+        <button type="button" class="video-dot active" aria-label="Depoimento 1, Rafael Kuzma"></button>
+        <button type="button" class="video-dot" aria-label="Depoimento 2, Philippe Enke"></button>
+        <button type="button" class="video-dot" aria-label="Depoimento 3, Ruan Ançay"></button>
+        <button type="button" class="video-dot" aria-label="Depoimento 4, Heloise Biscaia"></button>
       </div>
     </div>
   </section>
@@ -593,7 +590,7 @@
         
         <!-- Logo & About -->
         <div class="lg:col-span-5">
-          <img src="assets/images/logo.webp" alt="Conceito Prime - Marketing Digital" width="400" height="114" class="h-8 object-contain mb-8 filter brightness-0 invert opacity-90">
+          <img src="assets/images/logo-footer.webp" alt="Conceito Prime - Marketing Digital" width="400" height="114" class="footer-logo mb-8">
           <p class="text-prime-400 font-light text-[13px] leading-[1.8] max-w-sm">
             Especialistas em posicionamento, branding e tráfego para marcas que buscam autoridade, elegância e resultados de altíssimo padrão.
           </p>
@@ -659,8 +656,8 @@
           if (entry.isIntersecting) {
             // Wait 2 seconds, then animate the shadow
             setTimeout(() => {
-              estruturaShadow.classList.remove('opacity-0', 'translate-x-0', 'translate-y-0');
-              estruturaShadow.classList.add('opacity-100', 'translate-x-6', 'translate-y-6');
+              estruturaShadow.classList.remove('opacity-0');
+              estruturaShadow.classList.add('opacity-100', 'estrutura-shadow--active');
             }, 2000);
             observer.disconnect(); // Animate only once
           }

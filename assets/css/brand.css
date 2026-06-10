@@ -119,11 +119,55 @@ h1, h2, h3, h4 {
 }
 
 #header {
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(10px);
+  background: #fff;
   border-bottom: 1px solid transparent;
   transition: all .4s;
 }
+.site-logo-link {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+.site-logo {
+  display: block;
+  height: 2.25rem;
+  width: auto;
+  max-width: 10rem;
+  object-fit: contain;
+}
+@media (min-width: 1024px) {
+  .site-logo {
+    height: 2.5rem;
+    max-width: 11.5rem;
+  }
+}
+.header-nav-right {
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.header-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+#header .nav-link,
+#header .btn-wa {
+  white-space: nowrap;
+}
+#mobile-menu {
+  background: #fff;
+}
+.footer-logo {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+  max-width: 12rem;
+  object-fit: contain;
+}
+
 #header.scrolled {
   border-bottom: 1px solid rgba(0,0,0,0.05);
   box-shadow: 0 4px 30px rgba(0,0,0,.03);
@@ -846,11 +890,13 @@ h1, h2, h3, h4 {
 .video-carousel-track {
   display: flex;
   transition: transform 0.6s ease;
+  will-change: transform;
 }
 .video-carousel-slide {
-  min-width: 100%;
-  flex-shrink: 0;
-  padding: 0 0.25rem;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .video-thumb {
   position: relative;
@@ -865,9 +911,10 @@ h1, h2, h3, h4 {
   background: var(--brand-dark-deep);
 }
 .video-thumb img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.4s ease;
 }
 .video-thumb:hover img { transform: scale(1.02); }
@@ -965,6 +1012,36 @@ h1, h2, h3, h4 {
 }
 
 .team-blur { filter: blur(3px) grayscale(20%); }
+
+/* Nossa estrutura: faixa amarela proporcional (canto inferior direito) */
+.estrutura-shadow {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: -0.75rem;
+  bottom: -0.75rem;
+  background: var(--brand-yellow);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translate(0, 0);
+}
+.estrutura-shadow--active {
+  opacity: 1;
+  transform: translate(0.75rem, 0.75rem);
+}
+@media (min-width: 1024px) {
+  .estrutura-shadow {
+    top: 1rem;
+    left: 1rem;
+    right: -1rem;
+    bottom: -1rem;
+  }
+  .estrutura-shadow--active {
+    transform: translate(1rem, 1rem);
+  }
+}
+
 
 /* CTA primário */
 .btn-wa {
