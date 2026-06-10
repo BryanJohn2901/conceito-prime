@@ -17,6 +17,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Share+Tech&family=Michroma&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/brand.css">
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
   <link rel="preload" as="image" href="assets/images/hero-bg.webp" type="image/webp">
   <script>
     tailwind.config = {
@@ -55,17 +58,17 @@
 
         <!-- Desktop links -->
         <div class="hidden md:flex items-center gap-10">
-          <a href="/"       class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Início</a>
-          <a href="/quem-somos/"  class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Quem somos</a>
-          <a href="/blog/"        class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Blog</a>
-          <a href="/contato/"     class="nav-link text-prime-900 text-[13px] uppercase tracking-widest font-medium transition">Contato</a>
+          <a href="/"       class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Início</a>
+          <a href="/quem-somos/"  class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Quem somos</a>
+          <a href="/blog/"        class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Blog</a>
+          <a href="/contato/"     class="nav-link text-prime-900 text-[15px] uppercase tracking-widest font-medium transition">Contato</a>
         </div>
 
         <!-- CTA + burger -->
         <div class="flex items-center gap-4">
-          <a href="/contato/"
-             class="hidden md:inline-flex items-center justify-center bg-prime-900 text-white font-semibold text-[11px] px-7 py-3 rounded-none uppercase tracking-[0.2em] hover:bg-accent transition-all duration-300">
-            Orçamento Rápido
+          <a href="#"
+             class="btn-wa hidden md:inline-flex text-[11px] px-7 py-3 uppercase tracking-[0.2em]">
+            Solicitar orçamento
           </a>
           <button id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" class="md:hidden text-prime-900 focus:outline-none">
             <i class="fas fa-bars text-xl"></i>
@@ -79,9 +82,9 @@
         <a href="/quem-somos/"  class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Quem somos</a>
         <a href="/blog/"        class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Blog</a>
         <a href="/contato/"     class="text-prime-900 text-sm uppercase tracking-widest font-medium transition px-2">Contato</a>
-        <a href="/contato/"
-           class="inline-flex justify-center items-center bg-prime-900 text-white font-medium text-xs px-6 py-4 mt-2 uppercase tracking-[0.2em]">
-          Orçamento Rápido
+        <a href="#"
+           class="btn-wa inline-flex justify-center text-xs px-6 py-4 mt-2 uppercase tracking-[0.2em]">
+          Solicitar orçamento
         </a>
       </div>
     </div>
@@ -99,9 +102,10 @@
         Estratégia ideal para<br><span class="text-gold-400">impulsionar</span> seu resultado
       </h1>
 
-      <a href="/contato/"
-         class="btn-brand inline-flex items-center justify-center px-10 py-4 uppercase tracking-[0.2em] text-[11px]">
-        Quero me surpreender
+      <a href="#"
+         class="btn-wa px-12 py-5 uppercase tracking-[0.2em] text-[12px] font-bold"
+         style="background:var(--brand-yellow);color:var(--brand-dark);box-shadow:0 8px 32px rgba(247,204,25,.45);">
+        Solicitar orçamento
       </a>
       
     </div>
@@ -134,7 +138,7 @@
         <figure class="order-1 lg:order-2 relative flex justify-center lg:justify-end m-0" id="estrutura-img-container">
           <div class="relative max-w-lg w-full z-10">
             <div id="estrutura-shadow" class="absolute -inset-4 bg-gold-400 opacity-0 translate-x-0 translate-y-0 -z-10 transition-all duration-1000 ease-out" aria-hidden="true"></div>
-            <img src="assets/images/estrutura.webp" alt="Equipe da Conceito Prime no escritório em Curitiba" width="900" height="506" class="w-full object-cover aspect-[4/5] relative z-0 grayscale-[20%] border border-white/10" loading="lazy" decoding="async">
+            <img src="assets/images/estrutura.webp" alt="Equipe da Conceito Prime no escritório em Curitiba" width="900" height="506" class="w-full object-contain relative z-0 grayscale-[20%] border border-white/10" loading="lazy" decoding="async">
           </div>
         </figure>
 
@@ -153,127 +157,92 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
         <!-- 1 -->
-        <article class="service-card bg-prime-50 p-10 flex flex-col items-center text-center group relative">
+        <article class="service-card p-10 flex flex-col items-center text-center group relative">
           <a href="/servicos/redes-sociais/" class="absolute inset-0 z-10" aria-label="Conheça o serviço de Redes Sociais"></a>
           <div class="service-icon-wrap w-16 h-16 rounded-full border border-prime-200 flex items-center justify-center mb-6 text-prime-900 text-xl">
             <i class="fas fa-share-nodes " aria-hidden="true"></i>
           </div>
           <h3 class="font-serif text-xl text-prime-900 mb-4">Redes Sociais</h3>
-          <p class="text-prime-600 font-light text-[13px] leading-relaxed">Curadoria, posicionamento e gestão de redes para conexões profundas e autênticas.</p>
+          <p class="text-prime-600 font-light text-[15px] leading-relaxed">Curadoria, posicionamento e gestão de redes para conexões profundas e autênticas.</p>
           <span class="mt-4 text-gold-500 text-[10px] uppercase tracking-widest font-semibold">Saiba mais</span>
         </article>
 
         <!-- 2 -->
-        <article class="service-card bg-prime-50 p-10 flex flex-col items-center text-center group relative">
+        <article class="service-card p-10 flex flex-col items-center text-center group relative">
           <a href="/servicos/google-meta-ads/" class="absolute inset-0 z-10" aria-label="Conheça o serviço de Google e Meta Ads"></a>
           <div class="service-icon-wrap w-16 h-16 rounded-full border border-prime-200 flex items-center justify-center mb-6 text-prime-900 text-xl">
             <i class="fab fa-google " aria-hidden="true"></i>
           </div>
           <h3 class="font-serif text-xl text-prime-900 mb-4">Google e Meta Ads</h3>
-          <p class="text-prime-600 font-light text-[13px] leading-relaxed">Inteligência de tráfego pago focado na atração de público qualificado de alto valor.</p>
+          <p class="text-prime-600 font-light text-[15px] leading-relaxed">Inteligência de tráfego pago focado na atração de público qualificado de alto valor.</p>
           <span class="mt-4 text-gold-500 text-[10px] uppercase tracking-widest font-semibold">Saiba mais</span>
         </article>
 
         <!-- 3 -->
-        <article class="service-card bg-prime-50 p-10 flex flex-col items-center text-center group relative">
+        <article class="service-card p-10 flex flex-col items-center text-center group relative">
           <a href="/servicos/plataformas-web/" class="absolute inset-0 z-10" aria-label="Conheça o serviço de Plataformas Web"></a>
           <div class="service-icon-wrap w-16 h-16 rounded-full border border-prime-200 flex items-center justify-center mb-6 text-prime-900 text-xl">
             <i class="fas fa-laptop-code " aria-hidden="true"></i>
           </div>
           <h3 class="font-serif text-xl text-prime-900 mb-4">Plataformas Web</h3>
-          <p class="text-prime-600 font-light text-[13px] leading-relaxed">Desenvolvimento de sites institucionais com design minimalista e altíssima conversão.</p>
+          <p class="text-prime-600 font-light text-[15px] leading-relaxed">Desenvolvimento de sites institucionais com design minimalista e altíssima conversão.</p>
           <span class="mt-4 text-gold-500 text-[10px] uppercase tracking-widest font-semibold">Saiba mais</span>
         </article>
 
         <!-- 4 -->
-        <article class="service-card bg-prime-50 p-10 flex flex-col items-center text-center group relative">
+        <article class="service-card p-10 flex flex-col items-center text-center group relative">
           <a href="/servicos/papelaria-fina/" class="absolute inset-0 z-10" aria-label="Conheça o serviço de Papelaria Fina"></a>
           <div class="service-icon-wrap w-16 h-16 rounded-full border border-prime-200 flex items-center justify-center mb-6 text-prime-900 text-xl">
             <i class="fas fa-file-invoice " aria-hidden="true"></i>
           </div>
           <h3 class="font-serif text-xl text-prime-900 mb-4">Papelaria Fina</h3>
-          <p class="text-prime-600 font-light text-[13px] leading-relaxed">Design de materiais impressos que transmitem credibilidade e requinte absoluto.</p>
+          <p class="text-prime-600 font-light text-[15px] leading-relaxed">Design de materiais impressos que transmitem credibilidade e requinte absoluto.</p>
           <span class="mt-4 text-gold-500 text-[10px] uppercase tracking-widest font-semibold">Saiba mais</span>
         </article>
 
         <!-- 5 -->
-        <article class="service-card bg-prime-50 p-10 flex flex-col items-center text-center group relative">
+        <article class="service-card p-10 flex flex-col items-center text-center group relative">
           <a href="/servicos/branding/" class="absolute inset-0 z-10" aria-label="Conheça o serviço de Branding"></a>
           <div class="service-icon-wrap w-16 h-16 rounded-full border border-prime-200 flex items-center justify-center mb-6 text-prime-900 text-xl">
             <i class="fas fa-lightbulb " aria-hidden="true"></i>
           </div>
           <h3 class="font-serif text-xl text-prime-900 mb-4">Branding</h3>
-          <p class="text-prime-600 font-light text-[13px] leading-relaxed">Construção e reposicionamento de marcas voltadas para o segmento de luxo.</p>
+          <p class="text-prime-600 font-light text-[15px] leading-relaxed">Construção e reposicionamento de marcas voltadas para o segmento de luxo.</p>
           <span class="mt-4 text-gold-500 text-[10px] uppercase tracking-widest font-semibold">Saiba mais</span>
         </article>
 
         <!-- 6 -->
-        <article class="service-card bg-prime-50 p-10 flex flex-col items-center text-center group relative">
+        <article class="service-card p-10 flex flex-col items-center text-center group relative">
           <a href="/servicos/treinamentos/" class="absolute inset-0 z-10" aria-label="Conheça o serviço de Treinamentos"></a>
           <div class="service-icon-wrap w-16 h-16 rounded-full border border-prime-200 flex items-center justify-center mb-6 text-prime-900 text-xl">
             <i class="fas fa-chalkboard-user " aria-hidden="true"></i>
           </div>
           <h3 class="font-serif text-xl text-prime-900 mb-4">Treinamentos</h3>
-          <p class="text-prime-600 font-light text-[13px] leading-relaxed">Capacitação in-company focada em atendimento primoroso e excelência relacional.</p>
+          <p class="text-prime-600 font-light text-[15px] leading-relaxed">Capacitação in-company focada em atendimento primoroso e excelência relacional.</p>
           <span class="mt-4 text-gold-500 text-[10px] uppercase tracking-widest font-semibold">Saiba mais</span>
         </article>
 
         <!-- 7 -->
-        <article class="service-card bg-prime-50 p-10 flex flex-col items-center text-center group relative">
+        <article class="service-card p-10 flex flex-col items-center text-center group relative">
           <a href="/servicos/pesquisa-dados/" class="absolute inset-0 z-10" aria-label="Conheça o serviço de Pesquisa e Dados"></a>
           <div class="service-icon-wrap w-16 h-16 rounded-full border border-prime-200 flex items-center justify-center mb-6 text-prime-900 text-xl">
             <i class="fas fa-chart-line " aria-hidden="true"></i>
           </div>
           <h3 class="font-serif text-xl text-prime-900 mb-4">Pesquisa & Dados</h3>
-          <p class="text-prime-600 font-light text-[13px] leading-relaxed">Levantamento de percepção de valor e satisfação para refinamento contínuo.</p>
+          <p class="text-prime-600 font-light text-[15px] leading-relaxed">Levantamento de percepção de valor e satisfação para refinamento contínuo.</p>
           <span class="mt-4 text-gold-500 text-[10px] uppercase tracking-widest font-semibold">Saiba mais</span>
         </article>
 
         <!-- 8 -->
-        <article class="service-card bg-prime-50 p-10 flex flex-col items-center text-center group relative">
+        <article class="service-card p-10 flex flex-col items-center text-center group relative">
           <a href="/servicos/automacao-vip/" class="absolute inset-0 z-10" aria-label="Conheça o serviço de Automação VIP"></a>
           <div class="service-icon-wrap w-16 h-16 rounded-full border border-prime-200 flex items-center justify-center mb-6 text-prime-900 text-xl">
             <i class="fab fa-whatsapp " aria-hidden="true"></i>
           </div>
           <h3 class="font-serif text-xl text-prime-900 mb-4">Automação VIP</h3>
-          <p class="text-prime-600 font-light text-[13px] leading-relaxed">Arquitetura de atendimento otimizado no WhatsApp mantendo o toque humano.</p>
+          <p class="text-prime-600 font-light text-[15px] leading-relaxed">Arquitetura de atendimento otimizado no WhatsApp mantendo o toque humano.</p>
           <span class="mt-4 text-gold-500 text-[10px] uppercase tracking-widest font-semibold">Saiba mais</span>
         </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== #SEJAPRIME STATS ========== -->
-  <section class="bg-prime-900 py-32 border-y border-prime-800">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-      
-      <div class="mb-20">
-        <h2 class="font-display text-4xl sm:text-5xl text-gold-400">
-          # SejaPrime
-        </h2>
-      </div>
-
-      <div class="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32">
-        
-        <div>
-          <div class="font-serif text-6xl text-white mb-4">+11</div>
-          <p class="text-gold-400 font-medium uppercase tracking-[0.25em] text-[10px]">Clientes Ativos</p>
-        </div>
-
-        <div class="hidden md:block w-[1px] h-20 bg-prime-800"></div>
-
-        <div>
-          <div class="font-serif text-6xl text-white mb-4">+61</div>
-          <p class="text-gold-400 font-medium uppercase tracking-[0.25em] text-[10px]">Jobs Realizados</p>
-        </div>
-
-        <div class="hidden md:block w-[1px] h-20 bg-prime-800"></div>
-
-        <div>
-          <div class="font-serif text-6xl text-white mb-4">0</div>
-          <p class="text-gold-400 font-medium uppercase tracking-[0.25em] text-[10px]">Objetivo: Solucionar</p>
-        </div>
 
       </div>
     </div>
@@ -399,13 +368,13 @@
       
       <div class="text-center mb-16">
         <h2 class="sr-only">O que falam sobre nós</h2>
-        <i class="fas fa-quote-right text-4xl text-gold-500/30 mb-6 block" aria-hidden="true"></i>
+        <i class="fas fa-quote-right quote-icon text-5xl sm:text-6xl mb-6 block" aria-hidden="true"></i>
       </div>
 
       <div class="flex flex-col items-center">
         <div class="w-full text-center relative px-4 sm:px-12">
           
-          <blockquote class="font-sans text-xl sm:text-2xl lg:text-3xl text-white leading-relaxed mb-10 font-light"><p>"A proposta de valor da Conceito Prime é extraordinária. Eles possuem a sensibilidade de compreender a exata sofisticação que precisávamos para posicionar nossa marca. O nível de atendimento é simplesmente impecável."</p></blockquote>
+          <blockquote class="testimonial-text font-sans text-xl sm:text-2xl lg:text-3xl leading-relaxed mb-10 font-light"><p>"A proposta de valor da Conceito Prime é <span class="highlight">extraordinária</span>. Eles possuem a sensibilidade de compreender a exata sofisticação que precisávamos para posicionar nossa marca. O nível de atendimento é simplesmente <span class="highlight">impecável</span>."</p></blockquote>
           
           <div class="mt-10 pt-10 border-t border-prime-800 w-48 mx-auto">
             <h3 class="text-gold-400 font-medium tracking-[0.2em] text-[11px] uppercase mb-1">Gabriel</h3>
@@ -417,78 +386,201 @@
     </div>
   </section>
 
+  <!-- ========== DEPOIMENTOS EM VÍDEO ========== -->
+  <section class="py-24 bg-prime-950 border-b border-prime-800" aria-labelledby="video-depoimentos-title">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 id="video-depoimentos-title" class="font-serif text-2xl sm:text-3xl text-white uppercase">Depoimentos em <span class="text-gold-400">vídeo</span></h2>
+        <p class="text-prime-400 text-[15px] mt-3">Histórias reais de quem confia na Conceito Prime</p>
+      </div>
+      <div class="video-carousel-wrap">
+        <button type="button" class="video-arrow video-arrow-prev" id="video-prev" aria-label="Depoimento anterior">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div class="video-carousel">
+        <div id="video-carousel-track" class="video-carousel-track">
+          <div class="video-carousel-slide">
+            <button type="button" class="video-thumb" data-youtube-id="W2THQatKpyQ" data-video-title="Depoimento de Rafael Kuzma, Molas Kuzma">
+              <img src="assets/images/depoimentos/depoimento-rafael.webp" alt="Depoimento de Rafael Kuzma, Diretor da Molas Kuzma" width="997" height="534" loading="lazy" decoding="async">
+              <span class="video-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+            </button>
+          </div>
+          <div class="video-carousel-slide">
+            <button type="button" class="video-thumb" data-youtube-id="iaNFzlWoXDo" data-video-title="Depoimento de Philippe Enke, German Financial">
+              <img src="assets/images/depoimentos/depoimento-philipe.webp" alt="Depoimento de Philippe Enke, CEO da German Financial" width="997" height="534" loading="lazy" decoding="async">
+              <span class="video-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+            </button>
+          </div>
+          <div class="video-carousel-slide">
+            <button type="button" class="video-thumb" data-youtube-id="hCFMWFbYoZc" data-video-title="Depoimento de Ruan Ançay, Nova Direção Negócios">
+              <img src="assets/images/depoimentos/depoimento-ruan.webp" alt="Depoimento de Ruan Ançay, Diretor da Nova Direção Negócios" width="997" height="534" loading="lazy" decoding="async">
+              <span class="video-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+            </button>
+          </div>
+          <div class="video-carousel-slide">
+            <button type="button" class="video-thumb" data-youtube-id="UDBxL5vSQcI" data-video-title="Depoimento de Heloise Biscaia, Grupo Nuele">
+              <img src="assets/images/depoimentos/depoimento-heloise.webp" alt="Depoimento de Heloise Biscaia, Diretora do Grupo Nuele" width="997" height="534" loading="lazy" decoding="async">
+              <span class="video-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+            </button>
+          </div>
+        </div>
+        <div class="video-dots" role="tablist" aria-label="Navegar depoimentos em vídeo">
+          <button type="button" class="video-dot active" aria-label="Depoimento 1, Rafael Kuzma"></button>
+          <button type="button" class="video-dot" aria-label="Depoimento 2, Philippe Enke"></button>
+          <button type="button" class="video-dot" aria-label="Depoimento 3, Ruan Ançay"></button>
+          <button type="button" class="video-dot" aria-label="Depoimento 4, Heloise Biscaia"></button>
+        </div>
+        </div>
+        <button type="button" class="video-arrow video-arrow-next" id="video-next" aria-label="Próximo depoimento">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== CONTATO ========== -->
-  <section id="contato" class="bg-gold-400 py-32 relative">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8">
-      
-      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        
-        <!-- Text Side -->
-        <div class="order-2 lg:order-1 bg-white p-8 sm:p-12 shadow-lg">
-          <h2 class="font-serif text-3xl sm:text-4xl text-prime-900 mb-8 leading-tight uppercase">
-            Vamos tomar um <span class="text-accent">café?</span>
+  <section id="contato" class="contact-section bg-gold-400 py-12 lg:py-0 relative" aria-labelledby="contato-title">
+    <div class="contact-layered">
+
+      <!-- Mapa GMB (fundo, direita, sob o formulário) -->
+      <div class="contact-map-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q=Conceito+Prime,+Curitiba,+PR&hl=pt-BR&z=14&output=embed"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Conceito Prime no Google Maps">
+        </iframe>
+      </div>
+
+      <!-- Barra social + formulário -->
+      <div class="contact-front px-4 sm:px-6 lg:px-8">
+        <aside class="contact-social-rail" aria-label="Redes sociais">
+          <a href="https://www.facebook.com/ConceitoPrimeSE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/conceitoprimese/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/conceito-prime/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/@conceitoprime70" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </aside>
+
+        <div class="contact-form-card">
+          <h2 id="contato-title" class="contact-form-title">
+            Vamos tomar um <span>café?</span>
           </h2>
 
-          <form class="space-y-8" action="/contato/" method="get" aria-label="Formulário de contato">
-            <div class="grid sm:grid-cols-2 gap-8">
-              <div>
-                <label for="nome" class="sr-only">Nome completo</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu Nome Completo *" required
-                       class="w-full bg-transparent px-0 py-3 border-b border-prime-200 focus:border-accent outline-none transition text-[13px] text-prime-900 placeholder-prime-400">
-              </div>
-              <div>
-                <label for="telefone" class="sr-only">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="Telefone *" required
-                       class="w-full bg-transparent px-0 py-3 border-b border-prime-200 focus:border-accent outline-none transition text-[13px] text-prime-900 placeholder-prime-400">
-              </div>
+          <form class="cp-form space-y-5" action="#" method="post" aria-label="Formulário de contato">
+            <div>
+              <label for="nome" class="sr-only">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Nome" required autocomplete="name">
             </div>
-            
+            <div>
+              <label for="telefone" class="sr-only">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required data-phone-mask autocomplete="tel">
+            </div>
             <div>
               <label for="email" class="sr-only">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="E-mail Corporativo"
-                     class="w-full bg-transparent px-0 py-3 border-b border-prime-200 focus:border-accent outline-none transition text-[13px] text-prime-900 placeholder-prime-400">
+              <input type="email" id="email" name="email" placeholder="E-mail" required autocomplete="email">
             </div>
-            
             <div>
               <label for="servico" class="sr-only">Área de interesse</label>
-              <select id="servico" name="servico" class="w-full bg-transparent px-0 py-3 border-b border-prime-200 focus:border-accent outline-none transition text-[13px] text-prime-400 cursor-pointer appearance-none rounded-none">
-                <option value="" disabled selected>Área de Interesse *</option>
-                <option value="Consultoria">Consultoria Completa</option>
-                <option value="Branding">Branding & Posicionamento</option>
-                <option value="Trafego">Gestão de Tráfego Elite</option>
-                <option value="Plataformas">Desenvolvimento Web</option>
+              <select id="servico" name="servico" required>
+                <option value="todos" selected>Todos</option>
+                <option value="redes-sociais">Redes Sociais</option>
+                <option value="trafego">Google e Meta Ads</option>
+                <option value="web">Plataformas Web</option>
+                <option value="branding">Branding</option>
+                <option value="outros">Outros</option>
               </select>
             </div>
-            
-            <div class="pt-8">
-              <button type="submit"
-                      class="bg-prime-900 text-white hover:bg-accent font-semibold px-10 py-4 uppercase tracking-[0.2em] text-[11px] transition-all duration-500 w-full sm:w-auto">
-                Enviar Solicitação
-              </button>
+            <div>
+              <label for="mensagem" class="sr-only">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Mensagem" rows="4"></textarea>
             </div>
+            <button type="submit" class="contact-submit">
+              Enviar solicitação <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
           </form>
-        </div>
 
-        <!-- Image Side (Replacing generic map with elegant office visual or map styling) -->
-        <div class="order-1 lg:order-2 w-full aspect-[3/4] bg-prime-100 relative overflow-hidden flex items-center justify-center">
-             <!-- Using asset 2 again but as a dark backdrop for the contact section -->
-            <img src="assets/images/estrutura.webp" alt="Escritório da Conceito Prime em Curitiba" width="900" height="506" class="absolute inset-0 w-full h-full object-cover grayscale opacity-30" loading="lazy" decoding="async">
-            <div class="absolute inset-0 bg-prime-900/60"></div>
-            
-            <div class="relative z-10 text-center px-8 border border-white/20 p-12 backdrop-blur-sm m-8">
-               <i class="fas fa-map-marker-alt text-gold-400 text-3xl mb-6"></i>
-               <address class="text-white font-serif text-lg leading-relaxed mb-4 not-italic">
-                  Rua Antônio Rodrigues, 76<br>
-                  Campina do Siqueira<br>
-                  Curitiba - PR
-               </address>
-               <div class="w-10 h-[1px] bg-gold-400/50 mx-auto my-6"></div>
-               <p class="text-prime-200 text-[13px] font-light tracking-widest">(41) 3057-4764</p>
-            </div>
+          <div class="contact-social-mobile" aria-label="Redes sociais">
+            <a href="https://www.facebook.com/ConceitoPrimeSE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/conceitoprimese/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/conceito-prime/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/@conceitoprime70" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-
       </div>
-      
+
+    </div>
+  </section>
+
+  <!-- ========== #SEJAPRIME STATS (perto do footer) ========== -->
+  <section class="bg-prime-900 py-24 border-t border-prime-800" aria-labelledby="stats-title">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+      <h2 id="stats-title" class="font-display text-3xl sm:text-4xl text-gold-400 mb-16"># SejaPrime</h2>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32">
+        <div>
+          <p class="font-serif text-5xl sm:text-6xl text-white mb-3">+11</p>
+          <p class="text-gold-400 font-medium uppercase tracking-[0.25em] text-[10px]">Clientes Ativos</p>
+        </div>
+        <div class="hidden md:block w-px h-20 bg-prime-800" aria-hidden="true"></div>
+        <div>
+          <p class="font-serif text-5xl sm:text-6xl text-white mb-3">+61</p>
+          <p class="text-gold-400 font-medium uppercase tracking-[0.25em] text-[10px]">Jobs Realizados</p>
+        </div>
+        <div class="hidden md:block w-px h-20 bg-prime-800" aria-hidden="true"></div>
+        <div>
+          <p class="font-serif text-5xl sm:text-6xl text-white mb-3">0</p>
+          <p class="text-gold-400 font-medium uppercase tracking-[0.25em] text-[10px]">Objetivo: Solucionar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AVALIAÇÕES GOOGLE ========== -->
+  <section id="avaliacoes-google" class="py-20 bg-prime-50 border-t border-prime-100" aria-labelledby="reviews-title">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 id="reviews-title" class="font-serif text-2xl sm:text-3xl text-prime-900 uppercase">O que dizem no <span class="text-gold-400">Google</span></h2>
+        <p class="text-prime-500 text-[15px] mt-2">Avaliações reais do nosso perfil no Google Meu Negócio</p>
+      </div>
+      <div class="reviews-carousel">
+        <div id="reviews-track" class="reviews-track">
+          <article class="review-card">
+            <div class="review-card-inner">
+              <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="review-author">Cliente verificado</p>
+              <p class="review-text">"Atendimento impecável e resultados acima do esperado. A equipe entende a fundo o posicionamento da marca."</p>
+              <span class="review-source"><i class="fab fa-google" aria-hidden="true"></i> Google</span>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-card-inner">
+              <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="review-author">Cliente verificado</p>
+              <p class="review-text">"Profissionalismo em cada entrega. Recomendo para quem busca marketing digital com padrão premium."</p>
+              <span class="review-source"><i class="fab fa-google" aria-hidden="true"></i> Google</span>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-card-inner">
+              <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="review-author">Cliente verificado</p>
+              <p class="review-text">"Estratégia clara, comunicação transparente e equipe muito competente. Parceria de longo prazo."</p>
+              <span class="review-source"><i class="fab fa-google" aria-hidden="true"></i> Google</span>
+            </div>
+          </article>
+        </div>
+        <div class="reviews-dots" role="tablist" aria-label="Navegar avaliações">
+          <button type="button" class="reviews-dot active" aria-label="Avaliação 1"></button>
+          <button type="button" class="reviews-dot" aria-label="Avaliação 2"></button>
+          <button type="button" class="reviews-dot" aria-label="Avaliação 3"></button>
+        </div>
+      </div>
+      <p class="text-center mt-8">
+        <a href="https://www.google.com/maps/search/?api=1&query=Conceito+Prime+Curitiba+PR" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-prime-900 border-b border-prime-900 pb-1 uppercase tracking-[0.15em] text-[11px] font-semibold hover:text-gold-500 hover:border-gold-500 transition-colors">
+          <i class="fab fa-google" aria-hidden="true"></i> Ver todas as avaliações no Google
+        </a>
+      </p>
     </div>
   </section>
   </main>
@@ -522,12 +614,10 @@
         <div class="lg:col-span-3">
            <h4 class="text-white font-serif text-lg mb-6">Social</h4>
            <div class="flex gap-4">
-             <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-gold-400 hover:text-gold-400 transition-all duration-300">
-               <i class="fab fa-instagram"></i>
-             </a>
-             <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-gold-400 hover:text-gold-400 transition-all duration-300">
-               <i class="fab fa-linkedin-in"></i>
-             </a>
+             <a href="https://www.facebook.com/ConceitoPrimeSE/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-gold-400 hover:text-gold-400 transition-all duration-300" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+             <a href="https://www.instagram.com/conceitoprimese/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-gold-400 hover:text-gold-400 transition-all duration-300" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+             <a href="https://www.linkedin.com/company/conceito-prime/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-gold-400 hover:text-gold-400 transition-all duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+             <a href="https://www.youtube.com/@conceitoprime70" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-gold-400 hover:text-gold-400 transition-all duration-300" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
            </div>
         </div>
 
@@ -580,6 +670,7 @@
       observer.observe(estruturaContainer);
     }
   </script>
+  <script src="assets/js/brand.js" defer></script>
 
 </body>
 </html>
