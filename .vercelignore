@@ -1,0 +1,17 @@
+# Versões antigas na raiz — as páginas oficiais estão em pastas com index.html
+blog.html
+contato.html
+quem-somos.html
+
+# Arquivos locais / rascunhos não usados no site
+1._Rafael_-_Desktop.png
+2._Philipe_-_Desktop.png
+3._Ruan_-_Desktop.png
+4._Heloise_-_Desktop.png
+WhatsApp Image 2026-06-10 at 1.49.50 PM.jpeg
+hero_bg.jpeg
+favicon.png
+scripts/__pycache__/
+node_modules/
+.env
+.env.*
