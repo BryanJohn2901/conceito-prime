@@ -185,7 +185,7 @@ def render_footer():
     return '''
   </main>
 
-  <footer class="bg-prime-950 pt-24 pb-12 border-t border-white/10">
+  <footer class="site-footer bg-prime-950 pt-24 pb-12 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 mb-20 items-start border-b border-white/10 pb-20">
         <div class="lg:col-span-5">

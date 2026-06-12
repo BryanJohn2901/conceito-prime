@@ -272,24 +272,33 @@ document.querySelectorAll('[data-phone-mask]').forEach(maskPhone);
   });
 })();
 
-/* Carrossel avaliações Google */
-(function initReviewsCarousel() {
-  const track = document.getElementById('reviews-track');
-  const dots = document.querySelectorAll('.reviews-dot');
-  if (!track || !dots.length) return;
+/* Carrossel depoimentos em texto */
+(function initQuotesCarousel() {
+  const track = document.getElementById('quotes-track');
+  const viewport = track?.parentElement;
+  const dots = document.querySelectorAll('.quotes-dots .quotes-dot');
+  if (!track || !viewport || !dots.length) return;
+
   let idx = 0;
   let timer;
+  const slideWidth = () => viewport.clientWidth;
+
   const go = (n) => {
-    idx = (n + dots.length) % dots.length;
-    track.style.transform = `translateX(-${idx * 100}%)`;
+    const total = track.children.length;
+    if (!total) return;
+    idx = (n + total) % total;
+    track.style.transform = `translateX(-${idx * slideWidth()}px)`;
     dots.forEach((d, i) => d.classList.toggle('active', i === idx));
   };
-  const start = () => { timer = setInterval(() => go(idx + 1), 5000); };
+
+  const start = () => { timer = setInterval(() => go(idx + 1), 7000); };
   const stop = () => clearInterval(timer);
+
   dots.forEach((d, i) => d.addEventListener('click', () => { stop(); go(i); start(); }));
-  const wrap = track.closest('.reviews-carousel');
+  const wrap = track.closest('.quotes-carousel');
   wrap?.addEventListener('mouseenter', stop);
   wrap?.addEventListener('mouseleave', start);
+  window.addEventListener('resize', () => go(idx));
   go(0);
   start();
 })();
